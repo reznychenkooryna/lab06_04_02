@@ -1,4 +1,4 @@
-﻿#include "pch.h"
+#include "pch.h"
 #include "CppUnitTest.h"
 #include "../Lab_06_04_02/Lab_06_04_02.cpp"
 
@@ -12,14 +12,14 @@ namespace UnitTest1
 		
 		TEST_METHOD(TestMethod1)
 		{
-			double arr[] = { 1.5, -2.3, 3.0, 0.7 };
-			double C = 1.0;
+			double arr[] = { 1.5, -2.3, 4.0, 0.1, 3.3 };
+			int n = 5;
+			double C = 2.0;
 
-			int expected = 2;
+			int result = countLess(arr, n, C);
 
-			int actual = countLess(arr, 4, C);
+			int expected = 3;
 
-			Assert::AreEqual(expected, actual);
-		}
+			Assert::AreEqual(expected, result, L"countLess()");
 	};
 }
