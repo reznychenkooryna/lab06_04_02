@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <iomanip>
 #include <cmath>
+
 using namespace std;
 
 void inputArray(double arr[], int n, int i = 0) {
@@ -43,9 +44,6 @@ double findMax(double arr[], int n, int i = 0) {
     return (arr[i] > m ? arr[i] : m);
 }
 
-// ---------------------------
-// Копіювання елементів, що близькі до максимуму (не більше ніж на 20%)
-// ---------------------------
 void copyCloseToMax(double arr[], double result[], int n, double maxVal, int& j, int i = 0) {
     if (i == n) return;
     if (arr[i] >= maxVal * 0.8) {
